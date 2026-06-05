@@ -10,7 +10,7 @@ It reads the marcxml file and creates a csv file: Marc2CSVparser.py
 
 Then for exahc record it tries to recover URIs from datos.bne.es: readbne.py and datosbne.py
 
-## Issues
+## Alignment
 
 To the best of our knowledge, there is no direct connection from marc to LOD. As a result, we studied an alternative approach using the fields title, author and isbn. See, for example:
 
