@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jun  2 12:13:59 2026
 
-@author: gustavo
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 30 08:29:11 2022
-
-@author: gustavo
-"""
 import xml.sax
 import pandas as pd
 
