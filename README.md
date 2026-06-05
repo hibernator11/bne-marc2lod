@@ -4,4 +4,4 @@ This repository extracts translations included in the National Library of Spain,
 
 It reads the marcxml file and creates a csv file: Marc2CSVparser.py
 
-Then for exahc record it tries to recover URIs from datos.bne.es:
+Then for exahc record it tries to recover URIs from datos.bne.es: readbne.py and datosbne.py
