@@ -8,7 +8,7 @@ This repository is based on the dataset https://datosabiertos.bne.es/catalogo/da
 
 It reads the marcxml file and creates a csv file: [Marc2CSVparser-bne.py](Marc2CSVparser-bne.py)
 
-Then for exahc record it tries to recover URIs from datos.bne.es: readbne.py and datosbne.py
+Then, for each record, it tries to recover URIs from datos.bne.es: [read-bne.py](read-bne.py) reads the csv file and queries datos.bne.es using the script [datosbne.py](datosbne.py)
 
 ## Alignment
 
