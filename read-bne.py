@@ -7,7 +7,7 @@ Created on Tue Jun  2 14:17:39 2026
 """
 
 import pandas as pd
-import datosbne as bne
+import sparql-bne as bne
 import time
 
 df = pd.read_csv('output/bne-v1.csv.gz', compression='gzip', header=0, low_memory=False, skiprows=range(1, 1000), sep='\t', 
