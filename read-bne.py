@@ -47,16 +47,16 @@ for index, row in df.iterrows():
     print(query)
     print(pd.isna(row["f100a"]))
     
-    #if not pd.isna(row["f100a"]):
     try:
        data_extracter = bne.BNEQueryResults(query)
        time.sleep(3) 
        dfBne = data_extracter.load_as_dataframe()
        print(dfBne.head())
+       if len(dfBne.index) > 0:
+           dfBne.to_csv(str(row["f001"]) + '-df.csv')
     except:
-        print("Error: sparql")
+        print("Error:" + str(row["f001"]))
     
     print(index)
     if index == 50:
         break
-#print(df["f245a"])
