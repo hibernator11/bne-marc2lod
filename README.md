@@ -13,7 +13,7 @@ This repository is based on the dataset https://datosabiertos.bne.es/catalogo/da
 6. Match records by isbn and get Resource id
 7. With the Resource id, and one by one, retrieve the RDF from datos.bne.es and get the ids for authors and the rest of entities
 
-<img src="workflow-bne-v2.png">
+<img src="workflow-bne-v3.png">
 
 ## Scripts
 
