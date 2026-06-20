@@ -4,6 +4,17 @@ This project tends to align marc records made available by the National Library 
 
 This repository is based on the dataset https://datosabiertos.bne.es/catalogo/dataset/catalogo-bibliografico-monografias-modernas1
 
+## Workflow
+
+1. Download the dataset in MARC-XML: https://datosabiertos.bne.es/catalogo/dataset/catalogo-bibliografico-monografias-modernas1 
+2. Extract metadata: large dataset, so we retrieve some fields (e.g., author, title, isbn)
+3. Query datos.bne.es: when you run many queries, the repository stops working
+4. Load dump dataset in local: using fuseki, problem only Resources available, not the whole set of classes (e.g., Work, Expression, Author)
+6. Match records by isbn and get Resource id
+7. With the Resource id, and one by one, retrieve the RDF from datos.bne.es and get the ids for authors and the rest of entities
+
+<img src="workflow-bne.png">
+
 ## Scripts
 
 It reads the marcxml file and creates a csv file: [Marc2CSVparser-bne.py](Marc2CSVparser-bne.py)
