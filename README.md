@@ -22,7 +22,7 @@ It reads the marcxml file and creates a csv file: [Marc2CSVparser-bne.py](Marc2C
 Then, for each record, it tries to recover URIs from datos.bne.es: [process-bne.py](process-bne.py) reads the csv file and queries datos.bne.es using the script [sparqBne.py](sparqlBne.py)
 
 ## Fuseki
-Fuseki was employed as RDF data storage system. The following commands were used to load and run the SPARQL server. Note that the data provided needed some adjustments (e.g., incorrect URLS and malformed values) in order to be loaded in Fuseki.
+[Fuseki](https://jena.apache.org/documentation/fuseki2/) was employed as RDF data storage system. The following commands were used to load and run the SPARQL server. Note that the data provided needed some adjustments (e.g., incorrect URLS and malformed values) in order to be loaded in Fuseki.
 
 - Checking data: ./riot --validate ~/bne/clean.nt
 - Loading data dump: ./tdb2.xloader --loc=DB2 ~/bne/clean.nt
