@@ -21,6 +21,14 @@ It reads the marcxml file and creates a csv file: [Marc2CSVparser-bne.py](Marc2C
 
 Then, for each record, it tries to recover URIs from datos.bne.es: [process-bne.py](process-bne.py) reads the csv file and queries datos.bne.es using the script [sparqBne.py](sparqlBne.py)
 
+## Fuseki
+Fuseki was employed as RDF data storage system. The following commands were used to load and run the SPARQL server. Note that the data provided needed some adjustments (e.g., incorrect URLS and malformed values) in order to be loaded in Fuseki.
+
+- Checking data: ./riot --validate ~/bne/clean.nt
+- Loading data dump: ./tdb2.xloader --loc=DB2 ~/bne/clean.nt
+- Running ./fuseki-server --tdb2 --loc=/home/apache-jena-6.1.0/bin/DB /dataset
+- SPARQL access: http://localhost:3030/dataset/sparql
+
 ## Alignment
 
 To the best of our knowledge, there is no direct connection from marc to LOD. As a result, we studied an alternative approach using the fields title, author and isbn. See, for example:
