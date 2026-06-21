@@ -23,7 +23,8 @@ class BNEQueryResults:
         :param query: A SPARQL query string.
         """
         self.user_agent = "BNE-example Python/%s.%s" % (sys.version_info[0], sys.version_info[1])
-        self.endpoint_url = "https://datos.bne.es/sparql"
+        #self.endpoint_url = "https://datos.bne.es/sparql"
+        self.endpoint_url = "http://localhost:3030/dataset/sparql"
         self.sparql = SPARQLWrapper(self.endpoint_url, agent=self.user_agent)
         self.sparql.setQuery(query)
         self.sparql.setReturnFormat(JSON)
@@ -40,7 +41,7 @@ class BNEQueryResults:
         for result in results:
             new_result = {}
             for key in result:
-                new_result[key] = result[key]['value']
+                new_result[key] = result[key]['value'].replace("\t", "")
             new_results.append(new_result)
         return new_results
 
