@@ -7,7 +7,7 @@ This repository is based on the dataset https://datosabiertos.bne.es/catalogo/da
 ## Workflow
 
 1. Download the dataset in MARC-XML: https://datosabiertos.bne.es/catalogo/dataset/catalogo-bibliografico-monografias-modernas1 
-2. Extract metadata: large dataset, so we retrieve some fields (e.g., author, title, isbn)
+2. Extract metadata: large dataset, so we retrieve some fields (e.g., author, title, isbn). In total, 3723104 records.
 3. Query datos.bne.es: when you run many queries, the repository stops working. As a result, we try with a second approach as is described in step 4. 
 4. Load dump dataset in local using Fuseki: only Resources available, not the whole set of classes (e.g., Work, Expression, Author)
 6. Match records by isbn and get Resource id
